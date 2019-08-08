@@ -9,3 +9,5 @@ class SecretsController < ApplicationController
   def require_logged_in
     redirect_to '/login' unless current_user
   end
+
+end
