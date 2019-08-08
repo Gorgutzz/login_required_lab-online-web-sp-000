@@ -1,7 +1,6 @@
 class SessionsController < ApplicationController
 
   def show
-    @document = Document.find(params[:id])
   end
 
   def index
