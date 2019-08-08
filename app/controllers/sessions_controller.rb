@@ -1,19 +1,18 @@
 class SessionsController < ApplicationController
 
-  def show
+  def new
   end
 
   def create
     if params[:name] == nil || params[:name] == ""
       redirect_to '/login'
     else
-      session[:name] =  params[:name]
-       redirect_to '/welcome'
+    session[:name] =  params[:name]
+     redirect_to '/welcome'
     end
   end
 
   def destroy
     session.delete :name
   end
-
 end
