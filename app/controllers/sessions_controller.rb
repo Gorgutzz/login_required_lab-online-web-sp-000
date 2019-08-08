@@ -3,13 +3,6 @@ class SessionsController < ApplicationController
   def show
   end
 
-  def index
-  end
-
-  def create
-    @document = Document.create(author_id: user_id)
-  end
-
   private
 
   def require_login
