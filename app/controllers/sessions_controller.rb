@@ -4,11 +4,11 @@ class SessionsController < ApplicationController
   end
 
   def create
-    if params[:name] == nil
-        redirect_to '/login'
+    if params[:name] == nil || params[:name] == ""
+      redirect_to '/login'
     else
-      session[:name] =  params[:name]
-      redirect_to '/'
+    session[:name] =  params[:name]
+     redirect_to '/welcome'
     end
   end
 
