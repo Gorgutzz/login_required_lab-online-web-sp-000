@@ -4,7 +4,8 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @document = Document.create(author_id: user_id)
+    if params[:name] == nil
+        redirect_to '/login'
   end
 
 
