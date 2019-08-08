@@ -7,8 +7,8 @@ class SessionsController < ApplicationController
     if params[:name] == nil || params[:name] == ""
       redirect_to '/login'
     else
-    session[:name] =  params[:name]
-     redirect_to '/welcome'
+      session[:name] =  params[:name]
+       redirect_to '/welcome'
     end
   end
 
