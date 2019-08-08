@@ -3,9 +3,12 @@ class SessionsController < ApplicationController
   def show
   end
 
-  private
+  def create
+    @document = Document.create(author_id: user_id)
+  end
 
-  def require_login
-    return head(:forbidden) unless session.include? :user_id
+
+  def destroy
+    session.delete :name
   end
 end
